@@ -10,4 +10,7 @@
  *
  *= require_self
  *= require_tree .
+ *= require 'foundation4/css/normalize.css'
+ *= require 'foundation4/css/foundation.min.css'
+ *= require 'publishing-hackathon-13.css'
  */
