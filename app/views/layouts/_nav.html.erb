@@ -9,13 +9,7 @@
 <div class="ten columns">
   <%= flash['notice'] %>
   <ul class="nav-bar right">
-    <% if @auth.present? %>
-    <span style='color:white;'><%= "#{@auth.first} - " %></span>
-      <%= link_to "Logout", '/login', :method=>'delete', :class=>'button' %>
-    <% else %>
-      <%= link_to "login", '/login', :class=>'button' %>
-    <% end %>
-
+    <%= link_to "Sign in with Twitter", "auth/twitter" %>
   </ul>
 </div>
 </div>

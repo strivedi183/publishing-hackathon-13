@@ -7,6 +7,8 @@ gem 'haml'
 gem 'bcrypt-ruby'
 gem 'select2-rails'
 gem 'puma'
+gem 'twitter'
+gem 'omniauth-twitter'
 
 group :assets do
   gem 'sass-rails'
