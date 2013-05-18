@@ -1,0 +1,13 @@
+.row
+  .one.columns
+  .four.columns
+    = form_for @user do |f|
+      = f.label :first
+      = f.text_field :first, :autofocus=>true
+      = f.label :last
+      = f.text_field :last
+      = f.label :password
+      = f.password_field :password
+      = f.label :password_confirmation
+      = f.password_field :password_confirmation
+      = f.submit nil, :class=>'button_radius'

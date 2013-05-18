@@ -1,1 +1,5 @@
-%h1 WELCOME TO PUBLISHING HACKATHON 2013
+.row
+  .large-12.columns
+    %h1 WELCOME TO PUBLISHING HACKATHON 2013
+    - if @auth.present?
+      %p= @auth.first
