@@ -1,13 +1,16 @@
 <!-- Header and Nav -->
-
-<div class="row">
-<div class="two columns">
-  <h1>GiftBook</h1>
+<nav class="top-bar">
+  <ul class='title-area'>
+    <li class="name">
+      <h1 style='color:white;margin:10px;'>GiftBook</h1>
+    </li>
+  </ul>
 </div>
 <div class="ten columns">
   <%= flash['notice'] %>
   <ul class="nav-bar right">
     <% if @auth.present? %>
+    <span style='color:white;'><%= "#{@auth.first} - " %></span>
       <%= link_to "Logout", '/login', :method=>'delete', :class=>'button' %>
     <% else %>
       <%= link_to "login", '/login', :class=>'button' %>
