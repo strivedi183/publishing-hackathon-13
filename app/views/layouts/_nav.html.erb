@@ -5,16 +5,15 @@
       <h1 style='color:white;margin:10px;'>GiftBook</h1>
     </li>
   </ul>
-</div>
-<div class="ten columns">
-  <%= flash['notice'] %>
-  <ul class="nav-bar right">
-    <% if @auth.present? %>
-      <%= link_to "Signed in as #{@auth.name}", "#" %>
-      <%= link_to "Sign out", '#' %>
-    <% else %>
-      <%= link_to "Sign in with Twitter", "auth/twitter" %>
-    <% end %>
-  </ul>
-</div>
-</div>
+  <div class="ten columns">
+    <%= flash['notice'] %>
+    <ul class="nav-bar right">
+      <% if @auth.present? %>
+        <%= link_to "Signed in as #{@auth.name}", "#" %>
+        <%= link_to "Sign out", '#' %>
+      <% else %>
+        <%= link_to "Sign in with Twitter", "auth/twitter" %>
+      <% end %>
+    </ul>
+  </div>
+</nav>

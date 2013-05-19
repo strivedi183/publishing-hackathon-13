@@ -1,4 +1,5 @@
 .row
+<<<<<<< HEAD
   .large-12.columns
     %h1 BOOK MOB
     - if @auth.present?
@@ -10,3 +11,13 @@
       - @auth.polls.each do |poll|
         = link_to(poll.question, poll_path(poll.id))
         = poll.datetime
+
+/   .question_area
+/     = form_tag '/question' do
+/       .large-10.columns.centered
+/         = text_field_tag :question_field, nil, :placeholder=>'Ask your followers for book recommendations'
+/       .large-2.columns.centered
+/         = link_to :tweet, nil, :class=>'button tiny'
+/ .row
+/   .response_list
+

@@ -1,0 +1,20 @@
+body {
+  background-color: lightblue !important;
+  height: 1000px;
+}
+
+.container {
+  background-color:lightblue;
+  .question_area {
+      form {
+        margin-top: 10px;
+      }
+    }
+  }
+.response_list {
+  border: 1px solid lightgray;
+  min-height: 500px;
+  background-color: #fff;
+
+}
+}
