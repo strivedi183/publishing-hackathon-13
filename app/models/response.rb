@@ -19,7 +19,21 @@ class Response < ActiveRecord::Base
   after_save :parse
 
   def parse
-
   end
 
+  # searches the open library api for books and returns a json object
+  def search(query)
+    url = "http://openlibrary.org/search.json?q=#{query}"
+    json = JSON.parse HTTParty.get(url)
+    self.create_suggestion(json)
+  end
+
+  #  creates a suggestion object based on the search
+  def create_suggestion(json)
+    title = json['docs'][0]['title_suggest']
+    author = json['docs'][0]['author_name']
+    publisher = json['docs'][0]['publisher']
+    isbn = json['docs'][0]['isbn'][0]
+    suggestion = Suggestion.create(:title=>title,:author=>author,:isbn=>isbn, :response=>self)
+  end
 end
