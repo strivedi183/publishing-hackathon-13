@@ -10,12 +10,11 @@
   <%= flash['notice'] %>
   <ul class="nav-bar right">
     <% if @auth.present? %>
-    <span style='color:white;'><%= "#{@auth.first} - " %></span>
-      <%= link_to "Logout", '/login', :method=>'delete', :class=>'button' %>
+      <%= link_to "Signed in as #{@auth.name}", "#" %>
+      <%= link_to "Sign out", '#' %>
     <% else %>
-      <%= link_to "login", '/login', :class=>'button' %>
+      <%= link_to "Sign in with Twitter", "auth/twitter" %>
     <% end %>
-
   </ul>
 </div>
 </div>

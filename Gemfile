@@ -10,6 +10,7 @@ gem 'puma'
 gem 'twitter'
 # gem 'openlibrary'
 gem 'goodreads'
+gem 'omniauth-twitter'
 
 group :assets do
   gem 'sass-rails'

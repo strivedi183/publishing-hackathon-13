@@ -11,14 +11,59 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130518184440) do
+ActiveRecord::Schema.define(:version => 20130519010737) do
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.integer  "suggestion_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  create_table "polls", :force => true do |t|
+    t.string   "tweet_id"
+    t.datetime "datetime"
+    t.string   "question"
+    t.boolean  "is_active",  :default => true
+    t.integer  "user_id"
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+  end
+
+  create_table "responses", :force => true do |t|
+    t.string   "tweet_id"
+    t.datetime "datetime"
+    t.string   "body"
+    t.string   "name"
+    t.integer  "poll_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "suggestions", :force => true do |t|
+    t.string   "title"
+    t.string   "author"
+    t.string   "isbn"
+    t.integer  "response_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "tags", :force => true do |t|
+    t.string   "name"
+    t.integer  "poll_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "users", :force => true do |t|
-    t.string   "first"
-    t.string   "last"
-    t.string   "password_digest"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
+    t.string   "oauth_token"
+    t.string   "oauth_secret"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
 end
