@@ -4,7 +4,7 @@
     - if @auth.present?
       %p= @auth.name
       %p Please Tweet out a Question
-      = form_tag '/polls', :remote => true do
+      = form_tag '/polls' do
         = text_field_tag :body
         = submit_tag "Tweet", :class => 'button radius'
       - @auth.polls.each do |poll|
