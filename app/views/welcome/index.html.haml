@@ -1,5 +1,12 @@
 .row
   .large-12.columns
-    %h1 WELCOME TO PUBLISHING HACKATHON 2013
+    %h1 BOOK MOB
     - if @auth.present?
       %p= @auth.name
+      %p Please Tweet out a Question
+      = form_tag '/polls', :remote => true do
+        = text_field_tag :body
+        = submit_tag "Tweet", :class => 'button radius'
+      - @auth.polls.each do |poll|
+        = link_to(poll.question, poll_path(poll.id))
+        = poll.datetime

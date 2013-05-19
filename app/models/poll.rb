@@ -17,4 +17,14 @@ class Poll < ActiveRecord::Base
   has_many :tags
   has_many :responses
   belongs_to :user
+
+  def get_responses
+    user = User.find(self.user_id)
+    tweets = user.twitter.mentions_timeline
+    tweets.each do |tweet|
+      binding.pry
+      response = Response.create
+      self.responses << response
+    end
+  end
 end
