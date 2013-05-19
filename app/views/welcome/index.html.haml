@@ -1,5 +1,10 @@
 .row
-  .large-12.columns
-    %h1 WELCOME TO PUBLISHING HACKATHON 2013
-    - if @auth.present?
-      %p= @auth.name
+  .question_area
+    = form_tag '/question' do
+      .large-10.columns.centered
+        = text_field_tag :question_field, nil, :placeholder=>'Ask your followers for book recommendations'
+      .large-2.columns.centered
+        = link_to :tweet, nil, :class=>'button tiny'
+.row
+  .response_list
+

@@ -1,6 +1,5 @@
 $(function() {
-
-  search('the+lord+of+the+rings');
+  search('one-hundred-years-of-solitude');
   console.log('loading');
 });
 
@@ -9,14 +8,17 @@ var results = {};
 
 
 function search(query) {
-
   $.ajax({
-    url:'http://openlibrary.org/search.json?callback=my_callback?q='+query,
+    url:'http://openlibrary.org/search.json?q='+query,
     dataType:'jsonp',
     method:'get',
-    jsonp: 'callback',
+    jsonp: false,
     jsonpCallback:'my_callback',
-    contentType:'application/javascript'
+    success: function(data) {
+    },
+    complete: function(data, status) {
+    }
+
   });
 }
 

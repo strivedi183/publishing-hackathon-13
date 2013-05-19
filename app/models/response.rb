@@ -16,4 +16,10 @@ class Response < ActiveRecord::Base
   attr_accessible :tweet_id, :datetime, :body, :name, :poll_id
   has_many :suggestions
   belongs_to :poll
+  after_save :parse
+
+  def parse
+
+  end
+
 end

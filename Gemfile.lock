@@ -80,15 +80,12 @@ GEM
       multipart-post (~> 1.1)
     ffi (1.8.1)
     formatador (0.2.4)
-<<<<<<< HEAD
     goodreads (0.2.2)
       activesupport (~> 3)
       hashie (~> 2.0)
       i18n (~> 0.5)
       oauth (~> 0.4)
       rest-client (~> 1.6)
-=======
->>>>>>> 04fa10168921ba5d11cef4fa810a3d10a1af0499
     guard (1.8.0)
       formatador (>= 0.2.4)
       listen (>= 1.0.0)
@@ -107,11 +104,7 @@ GEM
     jquery-rails (2.2.1)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
-<<<<<<< HEAD
-    json (1.7.7)
-=======
     json (1.8.0)
->>>>>>> 04fa10168921ba5d11cef4fa810a3d10a1af0499
     launchy (2.3.0)
       addressable (~> 2.3)
     listen (1.1.2)
@@ -132,8 +125,6 @@ GEM
     multipart-post (1.2.0)
     nokogiri (1.5.9)
     oauth (0.4.7)
-<<<<<<< HEAD
-=======
     omniauth (1.1.4)
       hashie (>= 1.2, < 3)
       rack
@@ -143,7 +134,6 @@ GEM
     omniauth-twitter (0.0.16)
       multi_json (~> 1.3)
       omniauth-oauth (~> 1.0)
->>>>>>> 04fa10168921ba5d11cef4fa810a3d10a1af0499
     pg (0.15.1)
     polyglot (0.3.3)
     pry (0.9.12.2)
@@ -194,11 +184,8 @@ GEM
       ffi (>= 0.5.0)
     rdoc (3.12.2)
       json (~> 1.4)
-<<<<<<< HEAD
     rest-client (1.6.7)
       mime-types (>= 1.16)
-=======
->>>>>>> 04fa10168921ba5d11cef4fa810a3d10a1af0499
     rspec (2.13.0)
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
@@ -265,19 +252,13 @@ DEPENDENCIES
   coffee-rails-source-maps
   database_cleaner
   factory_girl_rails
-<<<<<<< HEAD
   goodreads
-=======
->>>>>>> 04fa10168921ba5d11cef4fa810a3d10a1af0499
   guard-rspec
   haml
   jquery-rails
   launchy
   meta_request
-<<<<<<< HEAD
-=======
   omniauth-twitter
->>>>>>> 04fa10168921ba5d11cef4fa810a3d10a1af0499
   pg
   pry-debugger
   pry-rails
