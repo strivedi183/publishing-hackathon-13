@@ -7,6 +7,9 @@ gem 'haml'
 gem 'bcrypt-ruby'
 gem 'select2-rails'
 gem 'puma'
+gem 'twitter'
+# gem 'openlibrary'
+gem 'goodreads'
 
 group :assets do
   gem 'sass-rails'
