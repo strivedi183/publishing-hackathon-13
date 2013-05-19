@@ -8,9 +8,10 @@ gem 'bcrypt-ruby'
 gem 'select2-rails'
 gem 'puma'
 gem 'twitter'
-# gem 'openlibrary'
+gem 'json'
 gem 'goodreads'
 gem 'omniauth-twitter'
+gem 'httparty'
 
 group :assets do
   gem 'sass-rails'
