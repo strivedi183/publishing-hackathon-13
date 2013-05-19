@@ -2,17 +2,17 @@
 <nav class="top-bar">
   <ul class='title-area'>
     <li class="name">
-      <h1 style='color:white;margin:10px;'>GiftBook</h1>
+      <div class="button">BookMob</h1>
     </li>
   </ul>
   <div class="ten columns">
     <%= flash['notice'] %>
     <ul class="nav-bar right">
       <% if @auth.present? %>
-        <%= link_to "Signed in as #{@auth.name}", "#" %>
-        <%= link_to "Sign out", '#' %>
+        <%= link_to "Signed in as #{@auth.name}", "#", :class => 'button' %>
+        <%= link_to "Sign out", '#', :class => 'button' %>
       <% else %>
-        <%= link_to "Sign in with Twitter", "auth/twitter" %>
+        <%= link_to "Sign in with Twitter", "auth/twitter", :class => 'button' %>
       <% end %>
     </ul>
   </div>

@@ -1,6 +1,11 @@
-%br= @poll.question
-- @poll.responses.each do |response|
-  %br= response.body
-  %br= response.name
-  %br= response.datetime
-  %br
+.row
+  .large-2.columns
+  .large-8.columns
+    %br
+    %h3= @poll.question
+    - @poll.responses.each do |response|
+      %h4= response.body
+      %h4= response.name
+      %h4= response.datetime
+      %br
+  .large-2.columns
