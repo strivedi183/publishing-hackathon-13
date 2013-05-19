@@ -9,11 +9,14 @@ class PollsController < ApplicationController
   def new
   end
   def create
-    poll = Poll.create(:question => params[:body])
-    tweet = @auth.twitter.update(poll.question)
-    poll.tweet_id = tweet.id
-    poll.datetime = tweet.created_at
-    @auth.polls << poll
+    begin
+      tweet = @auth.twitter.update(params[:body])
+      poll = Poll.create(:question => params[:body])
+      poll.tweet_id = tweet.id
+      poll.datetime = tweet.created_at
+      @auth.polls << poll
+    rescue
+    end
     redirect_to root_path
   end
 end
