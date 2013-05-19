@@ -22,9 +22,16 @@ class Poll < ActiveRecord::Base
     user = User.find(self.user_id)
     tweets = user.twitter.mentions_timeline
     tweets.each do |tweet|
-      binding.pry
-      response = Response.create
-      self.responses << response
+      if tweet.in_reply_to_status_id.present?
+        if tweet.in_reply_to_status_id.to_s == self.tweet_id
+          response = Response.new
+          response.tweet_id = tweet.id
+          response.datetime = tweet.created_at
+          response.name = tweet.user.screen_name
+          response.body = tweet.text
+          self.responses << response
+        end
+      end
     end
   end
 end

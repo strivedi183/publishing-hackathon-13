@@ -1,0 +1,6 @@
+%br= @poll.question
+- @poll.responses.each do |response|
+  %br= response.body
+  %br= response.name
+  %br= response.datetime
+  %br

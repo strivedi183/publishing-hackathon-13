@@ -3,7 +3,8 @@ class PollsController < ApplicationController
     @poll = Poll.new
   end
   def show
-    @poll = Poll.find(id)
+    @poll = Poll.find(params[:id])
+    @poll.get_responses
   end
   def new
   end
