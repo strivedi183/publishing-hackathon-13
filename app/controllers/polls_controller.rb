@@ -14,5 +14,6 @@ class PollsController < ApplicationController
     poll.tweet_id = tweet.id
     poll.datetime = tweet.created_at
     @auth.polls << poll
+    redirect_to root_path
   end
 end
